@@ -17,7 +17,18 @@ namespace TodoApiRest.Controllers
             _service = service;
         }
 
-        // GET: api/Todo
+        /// <summary>
+        /// Returns a list of existing Todo items...
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET api/Todo/
+        ///
+        /// </remarks>
+        /// <returns>Returns a specific Todo item</returns>
+        /// <response code="200">Returns a list of existing Todo items</response>
+        /// <response code="500">Internal error</response>
         [HttpGet]
         public IActionResult GetTodoItems()
         {
@@ -31,7 +42,20 @@ namespace TodoApiRest.Controllers
             }
         }
 
-        // GET: api/Todo/5
+        /// <summary>
+        /// Returns a specific Todo item...
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET api/Todo/1
+        ///
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Returns a specific Todo item</returns>
+        /// <response code="200">Returns the specific todo item</response>
+        /// <response code="404">If the item don't exist</response>
+        /// <response code="500">Internal error</response>
         [HttpGet("{id}")]
         public IActionResult GetTodoItem(string id)
         {
@@ -50,7 +74,19 @@ namespace TodoApiRest.Controllers
             }
         }
 
-        // POST: api/Todo
+        /// <summary>
+        /// Create a Todo item...
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST api/Todo/
+        ///
+        /// </remarks>
+        /// <returns>Create a Todo item</returns>
+        /// <response code="200">Item has been created successfully.</response>
+        /// <response code="400">The parameter name is required.</response>
+        /// <response code="500">Internal error</response>
         [HttpPost]
         public IActionResult PostTodoItem(TodoItem item)
         {
@@ -68,7 +104,20 @@ namespace TodoApiRest.Controllers
             }
         }
 
-        // PUT: api/Todo/5
+        /// <summary>
+        /// Edit a Todo item...
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     PUT api/Todo/1
+        ///
+        /// </remarks>
+        /// <returns>Edit a Todo item</returns>
+        /// <response code="200">Item has been edited successfully.</response>
+        /// <response code="400">The parameter name is required.</response>
+        /// <response code="404">If the item don't exist</response>
+        /// <response code="500">Internal error</response>
         [HttpPut("{id}")]
         public IActionResult PutTodoItem(string id, TodoItem item)
         {
@@ -83,7 +132,7 @@ namespace TodoApiRest.Controllers
 
                 _service.Update(id, item);
 
-                return NoContent();
+                return Ok("Item has been edited successfully.");
             }
             catch (Exception)
             {
@@ -91,7 +140,19 @@ namespace TodoApiRest.Controllers
             }
         }
 
-        // DELETE: api/Todo/5
+        /// <summary>
+        /// Delete a Todo item...
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     PUT api/Todo/1
+        ///
+        /// </remarks>
+        /// <returns>Edit a Todo item</returns>
+        /// <response code="200">Item has been Deleted successfully.</response>
+        /// <response code="404">If the item don't exist</response>
+        /// <response code="500">Internal error</response>
         [HttpDelete("{id}")]
         public IActionResult DeleteTodoItem(string id)
         {
@@ -104,7 +165,7 @@ namespace TodoApiRest.Controllers
 
                 _service.Remove(todoItem.Id);
 
-                return NoContent();
+                return Ok("Item has been Deleted successfully.");
             }
             catch (Exception)
             {
