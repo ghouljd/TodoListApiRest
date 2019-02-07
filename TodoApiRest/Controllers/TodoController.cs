@@ -146,10 +146,10 @@ namespace TodoApiRest.Controllers
         /// <remarks>
         /// Sample request:
         ///
-        ///     PUT api/Todo/1
+        ///     DELETE api/Todo/1
         ///
         /// </remarks>
-        /// <returns>Edit a Todo item</returns>
+        /// <returns>Delete a Todo item</returns>
         /// <response code="200">Item has been Deleted successfully.</response>
         /// <response code="404">If the item don't exist</response>
         /// <response code="500">Internal error</response>
