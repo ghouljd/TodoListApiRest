@@ -1,10 +1,12 @@
-# Todo List Api Rest with ASP .NET core 2.2 & Swagger
+# Todo List Api Rest with ASP .NET core 2.2 with MongoDB & Swagger
 
-_Basic Api rest example in ASP .NET Core 2.2 & Swagger_
+_Basic Api rest example in ASP .NET Core 2.2 with MongoDB & Swagger_
 
 ### Prerequisites
 
 - [Visual Studio 2017+](https://visualstudio.microsoft.com)
+
+- [MongoDB](https://www.mongodb.com/)
 
 ### Installing
 
@@ -17,6 +19,8 @@ git clone https://github.com/ghouljd/chatLive.git
 ```
 
 Execute file _TodoApiRest.sln_ located in cloned folder.
+
+Create database _TodoListDB_ in your MongoDB instance.
 
 Compile and run project. Visit _https://localhost:<your-port>/swagger/_
 
@@ -41,6 +45,7 @@ The available routes are:
 ## Built tools
 
 - [Visual Studio 2017+](https://visualstudio.microsoft.com) - IDE for .NET Apps.
+- [MongoDB](https://www.mongodb.com/) - Database NoSQL.
 
 ## Made by
 
