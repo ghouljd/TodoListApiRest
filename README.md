@@ -14,7 +14,7 @@ Cloning the repository
 
 ```
 
-git clone https://github.com/ghouljd/chatLive.git
+git clone https://github.com/ghouljd/TodoListApiRest.git
 
 ```
 
@@ -22,7 +22,7 @@ Execute file _TodoApiRest.sln_ located in cloned folder.
 
 Create database _TodoListDB_ in your MongoDB instance.
 
-Compile and run project. Visit _https://localhost:<your-port>/swagger/_
+Compile and run project. Visit _https://localhost:your-port/swagger/_
 
 ```
 
